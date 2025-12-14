@@ -1,0 +1,182 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+
+/* "Get Quote" Button */
+.btn-quote {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: #ffffff;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(13, 110, 253, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-quote:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(13, 110, 253, 0.45);
+    background: linear-gradient(135deg, #0b5ed7, #0a58ca);
+    color: #ffffff;
+}
+
+/* HERO SECTION WITH BACKGROUND IMAGE */
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../assets/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay for readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+/* Keep text above overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* Simple themed header for inner pages */
+.page-hero {
+    background: linear-gradient(135deg, rgba(39, 145, 244, 0.85), rgb(0, 106, 255))
+    }
+
+    /* Service cards feel more premium */
+    .service-card {
+        border: 0;
+        border-radius: 16px;
+    }
+
+    .service-card .card-title {
+        font-weight: 700;
+    }
+
+
+    /* background: linear-gradient(135deg, rgba(13, 110, 253, 0.85), rgba(0, 0, 0, 0.85)); */
+
+
+
+    /* images inside services section tag */
+    .service-img {
+        min-height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    .service-card {
+        border-radius: 16px;
+        border: none;
+    }
+
+.top{
+    background-color: #102a43;
+}
+
+
+.carousel-img {
+  height: 60vh;
+  object-fit: cover;
+}
+.carousel-img-precision {
+  height: 60vh;
+  object-fit: cover;
+    object-position: center top;
+
+}
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(53, 84, 177, 0.55),
+    rgba(0, 0, 0, 0.65)
+  );
+  z-index: 1;
+}
+.carousel-caption {
+  z-index: 2;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+
+
+/* Premium dark blue backdrop */
+.bg-navy {
+  background: linear-gradient(
+    135deg,
+    #0b1f3a 0%,
+    #0d2a52 40%,
+    #081a30 100%
+  );
+  color: #ffffff;
+}
+
+/* Subtle texture & depth */
+.bg-navy::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(255,255,255,0.05), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(255,255,255,0.04), transparent 40%);
+  pointer-events: none;
+}
+
+/* Ensure content stays above */
+.bg-navy > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Blue info boxes */
+.box-blue {
+  background-color: rgb(0, 106, 255);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Optional: subtle hover polish */
+.box-blue:hover {
+  background-color: rgb(0, 96, 230);
+  transition: background-color 0.3s ease;
+}
+
+
+/* Force uniform carousel image size */
+#aboutCarousel img {
+  width: 100%;
+  height: 360px;       /* adjust if you want taller/shorter */
+  object-fit: cover;  /* fills area, crops edges nicely */
+}
