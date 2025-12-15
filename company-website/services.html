@@ -16,18 +16,22 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="top navbar navbar-expand-lg navbar-dark" style="background-color: #102a43;">
+  <nav class="top navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/images/logo.png" alt="CSK Precision Engineering Logo" class="logo me-2">
-        <span>CSK Precision Engineering</span>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/images/logo.png" alt="CSK Precision Engineering Logo" class="logo">
+        <!-- Hide long text on extra small phones -->
+        <span class="d-none d-sm-inline">CSK Precision Engineering</span>
+        <span class="d-inline d-sm-none">CSK Precision Engineering</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
@@ -40,30 +44,35 @@
   <!-- PAGE HEADER -->
   <section class="page-hero text-white">
     <div class="container py-5 text-center">
-      <h1 class="fw-bold">Our Services</h1>
-      <p class="lead mt-2 mb-0 opacity-75">
+      <h1 class="fw-bold mb-2">Our Services</h1>
+      <p class="lead mb-0 opacity-75">
         Precision engineering solutions for industrial and marine needs.
       </p>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <!-- SERVICES -->
   <section class="py-5 bg-light">
     <div class="container">
       <div class="row g-4">
 
-        <!-- 1) Precision Machining -->
-        <div class="col-lg-6">
+        <!-- Service Card (reuse this pattern) -->
+        <div class="col-12 col-lg-6">
           <div class="card service-card shadow-sm overflow-hidden h-100">
-            <div class="row g-0 h-100">
 
-              <!-- IMAGE STRIP -->
-              <div class="col-md-2 service-img" style="background-image: url('assets/images/services/precision.jpg');">
+            <!-- Mobile banner image -->
+            <div class="d-block d-md-none">
+              <img src="assets/images/services/precision.jpg" class="img-fluid w-100" style="height: 180px; object-fit: cover;"
+                alt="Precision Machining">
+            </div>
+
+            <div class="row g-0 h-100">
+              <!-- Desktop side strip -->
+              <div class="col-md-3 d-none d-md-block service-img"
+                style="background-image: url('assets/images/services/precision.jpg'); min-height: 100%;">
               </div>
 
-              <!-- TEXT -->
-              <div class="col-md-10">
+              <div class="col-12 col-md-9">
                 <div class="card-body p-4">
                   <h5 class="card-title">Precision Machining</h5>
                   <p class="card-text">
@@ -76,27 +85,29 @@
                   </ul>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
 
-        <!-- 2) CNC Turning & CNC Milling -->
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6">
           <div class="card service-card shadow-sm overflow-hidden h-100">
-            <div class="row g-0 h-100">
 
-              <!-- IMAGE STRIP -->
-              <div class="col-md-2 service-img" style="background-image: url('assets/images/services/machine.jpg');">
+            <div class="d-block d-md-none">
+              <img src="assets/images/services/machine.jpg" class="img-fluid w-100" style="height: 180px; object-fit: cover;"
+                alt="CNC Turning & CNC Milling">
+            </div>
+
+            <div class="row g-0 h-100">
+              <div class="col-md-3 d-none d-md-block service-img"
+                style="background-image: url('assets/images/services/machine.jpg'); min-height: 100%;">
               </div>
 
-              <!-- TEXT -->
-              <div class="col-md-10">
+              <div class="col-12 col-md-9">
                 <div class="card-body p-4">
                   <h5 class="card-title">CNC Turning & CNC Milling</h5>
                   <p class="card-text">
-                    CNC turning and milling for complex parts, prototypes, and production runs with reliable
-                    repeatability.
+                    CNC turning and milling for complex parts, prototypes, and production runs with reliable repeatability.
                   </p>
                   <ul class="mb-0">
                     <li>Turning, milling, drilling</li>
@@ -105,22 +116,25 @@
                   </ul>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
 
-        <!-- 3) Mechanical Spare Parts -->
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6">
           <div class="card service-card shadow-sm overflow-hidden h-100">
-            <div class="row g-0 h-100">
 
-              <!-- IMAGE STRIP -->
-              <div class="col-md-2 service-img" style="background-image: url('assets/images/services/spare.jpg');">
+            <div class="d-block d-md-none">
+              <img src="assets/images/services/spare.jpg" class="img-fluid w-100" style="height: 180px; object-fit: cover;"
+                alt="Mechanical Spare Parts">
+            </div>
+
+            <div class="row g-0 h-100">
+              <div class="col-md-3 d-none d-md-block service-img"
+                style="background-image: url('assets/images/services/spare.jpg'); min-height: 100%;">
               </div>
 
-              <!-- TEXT -->
-              <div class="col-md-10">
+              <div class="col-12 col-md-9">
                 <div class="card-body p-4">
                   <h5 class="card-title">Mechanical Spare Parts</h5>
                   <p class="card-text">
@@ -133,23 +147,25 @@
                   </ul>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
 
-        <!-- 4) Industrial & Marine Repair Works -->
-        <div class="col-lg-6">
+        <div class="col-12 col-lg-6">
           <div class="card service-card shadow-sm overflow-hidden h-100">
-            <div class="row g-0 h-100">
 
-              <!-- IMAGE STRIP -->
-              <div class="col-md-2 service-img"
-                style="background-image: url('assets/images/services/machine_repair.jpg');">
+            <div class="d-block d-md-none">
+              <img src="assets/images/services/machine_repair.jpg" class="img-fluid w-100"
+                style="height: 180px; object-fit: cover;" alt="Industrial & Marine Repair Works">
+            </div>
+
+            <div class="row g-0 h-100">
+              <div class="col-md-3 d-none d-md-block service-img"
+                style="background-image: url('assets/images/services/machine_repair.jpg'); min-height: 100%;">
               </div>
 
-              <!-- TEXT -->
-              <div class="col-md-10">
+              <div class="col-12 col-md-9">
                 <div class="card-body p-4">
                   <h5 class="card-title">Industrial & Marine Repair Works</h5>
                   <p class="card-text">
@@ -162,15 +178,14 @@
                   </ul>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
 
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="top text-white text-center py-3">
@@ -181,20 +196,16 @@
         <img src="assets/images/whatsapp.png" alt="WhatsApp">
       </a>
 
-
       <a href="https://www.instagram.com/csk_precision_engineering" target="_blank" class="footer-icon instagram"
         aria-label="Instagram">
         <img src="assets/images/instagram.png" alt="Instagram">
       </a>
-
-
     </div>
 
     <p class="mb-0">© 2025 CSK Precision Engineering. All rights reserved.</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 
 </html>

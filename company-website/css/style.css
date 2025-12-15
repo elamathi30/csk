@@ -142,8 +142,15 @@ footer {
   z-index: 1;
 }
 
+/* Ensure caption is always visible on top */
 .carousel-caption {
-  z-index: 2;
+  z-index: 5;
+  left: 8%;
+  right: 8%;
+  bottom: 18%;
+  text-align: left;
+  padding: 0;
+  /* avoid extra padding that can push content */
 }
 
 .logo {
@@ -176,7 +183,7 @@ footer {
 
 /* index second para */
 .custom-bg {
-    background: linear-gradient(135deg, rgb(0, 83, 228), rgb(226, 238, 255));
+  background: linear-gradient(135deg, rgb(0, 83, 228), rgb(226, 238, 255));
 }
 
 
@@ -184,6 +191,7 @@ footer {
   background: linear-gradient(135deg, #002f6c, #0060e6);
   color: #ffffff;
 }
+
 .footer-icon {
   display: inline-flex;
   align-items: center;
@@ -192,44 +200,120 @@ footer {
   height: 42px;
   margin: 0 8px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.15); /* visible by default */
+  background-color: rgba(255, 255, 255, 0.15);
+  /* visible by default */
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 
 .footer-icons {
-  display: flex;                 /* 🔑 key fix */
-  justify-content: center;       /* center horizontally */
-  align-items: center;           /* align vertically */
-  gap: 14px;                     /* spacing between icons */
+  display: flex;
+  /* 🔑 key fix */
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+  /* align vertically */
+  gap: 14px;
+  /* spacing between icons */
 }
+
 .footer-icon img {
   width: 22px;
   height: 22px;
   object-fit: contain;
 }
+
 .footer-icon.instagram img {
-  width: 39px;      
+  width: 39px;
   height: 39px;
   object-fit: contain;
 }
 
-.footer-icon.whatsapp{
+.footer-icon.whatsapp {
   background-color: #25D366;
 
-}  
-.footer-icon.instagram{
-  background: radial-gradient(circle at 30% 107%,
-    #fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
 }
+
+.footer-icon.instagram {
+  background: radial-gradient(circle at 30% 107%,
+      #fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
+}
+
 /* Individual brand colours on hover */
 .footer-icon.whatsapp:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .footer-icon.instagram:hover {
-     background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.15);
 
 }
 
+
+/* mobile responsiveness */
+
+/* 1) Prevent weird horizontal scrolling on mobile */
+html,
+body {
+  overflow-x: hidden;
+}
+
+
+/* Responsive text */
+.carousel-caption h1 {
+  font-size: clamp(22px, 4vw, 48px);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 14px;
+}
+
+
+/* Mobile fixes */
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 60vh;
+  }
+    .carousel-caption .btn {
+    padding: 10px 14px !important;
+    margin-bottom: 15px;
+    font-size: 14px !important;
+    line-height: 1.2;
+  }
+}
+  .carousel-caption {
+    bottom: 10%;
+    left: 6%;
+    right: 6%;
+  }
+
+
+  /* show the paragraph on mobile if you want */
+  .carousel-caption p {
+    display: block !important;
+  }
+
+/* Keep hamburger on the right */
+.navbar-toggler {
+  margin-left: auto;
+}
+
+/* Make the collapse take full width so it drops below */
+.navbar-collapse {
+  width: 100%;
+}
+
+/* Optional: make the dropdown menu visible with spacing */
+@media (max-width: 576px) {
+  .navbar-collapse {
+    background: #032c52;     /* same as your top color */
+    padding: 10px 12px;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+}
+  
