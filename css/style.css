@@ -123,15 +123,14 @@ footer {
 .carousel-img {
   height: 60vh;
   object-fit: cover;
-}
-
-.carousel-img-precision {
-  height: 60vh;
-  object-fit: cover;
-  object-position: center top;
+  width:100%;
+    object-position: center center; /* important */
 
 }
 
+
+/* ADD IN IF NEEDED FOR IMAGES */
+/* 
 .carousel-item::before {
   content: "";
   position: absolute;
@@ -140,7 +139,7 @@ footer {
       rgba(53, 84, 177, 0.55),
       rgba(0, 0, 0, 0.65));
   z-index: 1;
-}
+} */
 
 /* Ensure caption is always visible on top */
 .carousel-caption {
@@ -317,3 +316,24 @@ body {
   }
 }
   
+
+
+
+/* CAROUSEL CONTROL COLOR */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  background-size: 60% 60%;
+}
+
+
+.idx-bg{
+  background-color: rgba(255,255,255,0.7); 
+  display: inline-block; 
+  padding: 4px 8px; 
+  border-radius: 6px; 
+  color: #000;
+}
